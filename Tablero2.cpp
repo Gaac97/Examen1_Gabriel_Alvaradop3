@@ -51,9 +51,11 @@ char crearMatrix(char** m){
 }
 bool moverM(char** m, int x,int y,int x2,int y2){
 	int cont=1;
+	char pos=' ';
 	for(int i=0; j<7;j++){
 		for(int j=0; j<7;j++){
-			if(m[i][j]=='M'){
+			pos=m[i][j];
+			if(pos=='M'){
 				if(j==y2){
 					return true;
 				}
@@ -67,14 +69,15 @@ bool moverM(char** m, int x,int y,int x2,int y2){
 }
 
 bool moverG(char** m, int x, int y, int x2, int y2){
- 
+char pos=' ';
  int cont=1;
         for(int i=0; j<7;j++){
                 for(int j=0; j<7;j++){
-                        if(m[i][j]=='G'){
+                        if(pos=='G'){
                                 if(j==y2){
                                         return true;
                                 }
+				
 
                         }else{
                         return false;

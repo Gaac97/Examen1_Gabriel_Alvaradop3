@@ -1,18 +1,19 @@
 #ifndef FUNCIONES_H
 #define FUNCIONES_H
+#include  <iostream>
+#include <string>
 
 class funciones{
 	public:
-	int size;
-	char** areaJuego();
-	void printMatrix(char**);
-	char** crearMatrix(char**);
-	bool Comer(int**,int,int);
-	bool moverM(int**,int,int);
-	bool moverG(int**,int, int);
-	void liberarMemoria();
-		
+	funciones();
+	bool mover(funciones***,int,int,int,int);
+	bool pierde(funciones***,int);
+	bool comer(funciones***,int,int,int,int);
+	char icono();
+	virtual char getIcon()=0;
+
 };
+
 
 #endif
 
